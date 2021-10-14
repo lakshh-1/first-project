@@ -37,7 +37,11 @@ def main(argv):
                             curdate + "' GIT_COMMITTER_DATE='" + curdate + "' git commit -m 'update'", shell=True)
         i += 1
     subprocess.call(
-        "git rm realwork.txt; git commit -m 'delete'; git push;", shell=True)
+        "git rm realwork.txt; git commit -m 'delete'", shell=True)
+    subprocess.call(
+        " git commit -m 'delete'", shell=True)
+    subprocess.call(
+        "git push", shell=True)
 
 
 if __name__ == "__main__":
